@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página Personal</title>
+      <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
+  </head>
+ <body>
+  <main class="container">
+    <header >
+      <h1>¡Hola! Soy David</h1>
+    </header>
+    <nav>
+      <a href="#sobremi">Sobre mí</a> | <a href="#habilidades">Habilidades</a> |
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <main>
+      <section id="sobremi">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy estudiante del
+          <strong> Bootcamp de Desarrollo Web FullStack Con Python</strong>.
+        </p>
+        <form>
+          <h4>Datos</h4>
+          <label>
+            Nombres:
+            <input value="David" disabled />
+          </label>
+                    <label>
+            Apellidos:
+            <input value="Ponte Vega" disabled />
+          </label>
+          <label>
+            Edad:
+            <input value="25" disabled />
+          </label>
+        </form>
+        <form>
+          <h4>Comida Favorita</h4>
+          <label>
+            <input type="checkbox" name="Ceviche" value="en" checked />
+            Ceviche
+          </label>
+          <label>
+            <input type="checkbox" name="Lomo Saltado" value="es" checked />
+            Lomo Saltado
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="Tallarines Verdes"
+              value="do"
+              checked
+            />
+            Tallarines Verdes
+          </label>
+        </form>
+      </section>
+ <section id="habilidades"> 
+  <h2>Habilidades</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Habilidad</th>
+        <th>Nivel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>HTML5</td>
+        <td>Avanzado</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CSS3</td>
+        <td>Avanzado</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>JavaScript</td>
+        <td>Intermedio</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Python</td>
+        <td>Intermedio</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>React</td>
+        <td>Intermedio</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>C#</td>
+        <td>Intermedio</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>SQL</td>
+        <td>Avanzado</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+      <section id="contacto">
+        <h2>Datos de contacto</h2>
+        <ul>
+          <li>
+            <img src="email.svg" alt="Email" width="20" />
+            <span>Email: pontevegadavid@gmail.com</span>
+          </li>
+          <li>
+            <img src="phone.svg" alt="Teléfono" width="20" />
+            <span>Teléfono: +51 987 654 321</span>
+          </li>
+          <li>
+            <img src="address.svg" alt="Dirección" width="20" />
+            <span>Lima, Perú</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>©Copyright 2025 David | Todos los derechos reservados</p>
+    </footer>
+    </main>
+  </body>
+</html>
