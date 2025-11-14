@@ -1,0 +1,28 @@
+/* TODO: Empezar los estilos de este diseño */
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+
+  background-color: hsl(148, 38%, 91%);
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  /* border: 1px solid red; */
+
+  min-width: 400px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+}
