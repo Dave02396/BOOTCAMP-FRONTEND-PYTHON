@@ -18,34 +18,35 @@
       <h1>Contact Us</h1>
 
       <form>
-        <label>
-          First Name <span class="required">*</span>
+        <div class="row">
+          <label>
+            First Name <span class="required">*</span>
 
-          <input type="text" name="first_name" />
-        </label>
+            <input type="text" name="first_name" />
+          </label>
 
-        <label>
-          Last Name <span class="required">*</span>
+          <label>
+            Last Name <span class="required">*</span>
 
-          <input type="text" name="last_name" />
-        </label>
-
+            <input type="text" name="last_name" />
+          </label>
+        </div>
         <label>
           Email Address <span class="required">*</span>
 
-          <input type="text" name="email" />
+          <input type="email" name="email" />
         </label>
 
         <div>
           Query Type <span class="required">*</span>
 
-          <div>
-            <label>
+          <div class="row">
+            <label class="query_type">
               <input type="radio" name="query_type" />
 
               General Enquiry
             </label>
-            <label>
+            <label class="query_type">
               <input type="radio" name="query_type" />
 
               Support Request
