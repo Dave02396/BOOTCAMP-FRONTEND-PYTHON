@@ -1,0 +1,65 @@
+body {
+  background-color: hsl(0, 0%, 8%);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  background-color: hsl(0, 0%, 12%);
+  width: 300px;
+  text-align: center;
+  padding: 28px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+img {
+  width: 88px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+  font-size: 21px;
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: hsl(75, 94%, 57%);
+  text-align: center;
+    font-size:14px;
+}
+
+p {
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+}
+
+input[type="submit"] {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+  background-color: hsl(75, 94%, 57%);
+  cursor: pointer;
+  color: hsl(0, 0%, 12%);
+}
