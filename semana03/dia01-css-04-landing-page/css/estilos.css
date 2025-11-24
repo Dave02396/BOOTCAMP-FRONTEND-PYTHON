@@ -1,0 +1,358 @@
+/* GENERALES */
+
+* { /* Selector universal */
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 14px;
+}
+
+/* font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif; */
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  color: hsl(0, 0%, 100%);
+
+  background-color: hsl(218, 28%, 13%);
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  /* RWD para imágenes */
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* UTILS */
+
+.wrapper {
+  /* width: 1440px; */
+  width: min(100% - 42px, 1440px);
+  background-color: hsl(217, 28%, 15%);
+
+  /* border: 1px solid blue; */
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* HEADER SECTION */
+
+.header {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  padding-top: 42px;
+
+  background-color: hsl(217, 28%, 15%);
+}
+
+
+.header__nav {
+  /* TODO: terminar el css de este nav */
+  display: flex;
+  gap: 42px; /* 42px = 14 * 3 */
+}
+
+/* HERO SECTION */
+
+/* TODO : Terminar el css para la sección abajo del header(hero). Usen bem para el nombrado de las clases y reutilicen la función min. */
+
+/* REM : Root EM(Ancho de la letra M) o Entidad de Medida Relativa */ 
+
+.hero {
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* 14px * 2 = 28px = 2rem */
+
+  padding-top: 3rem; /* 3 x 14px = 42px */
+  padding-bottom: 12rem; /* 12 x 14px = 168px */
+
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  background-color: hsl(217, 28%, 15%);
+}
+
+.hero__image {}
+
+.hero__title {
+  /* border: 1px solid yellow; */
+
+  /* width: 720px; */
+  /* Elige el valor más pequeño entre los que le pasemos */
+  width: min(100% - 3rem, 720px);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700; /* por defecto */
+  font-size: 2.5rem;
+
+  text-align: center;
+}
+
+
+.hero__text {
+  /* TODO: Terminar de aplicar los estilos al parrafo del hero */
+  width: min(100% - 3rem, 720px);
+
+  font-size: 1.2rem;
+
+  text-align: center;
+}
+
+.hero__button {
+  font-weight: 700;
+
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem;
+  min-width: 220px;
+  background-color: hsl(176, 68%, 64%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* FEATURES SECTION */
+
+.features {
+  /* border: 1px solid red; */
+
+  background-color: hsl(218, 28%, 13%);
+
+  display: grid;
+  grid-template-columns: 340px; /* MOBILE FIRST: Esta propiedad es para móviles */
+  /* grid-template-rows: 240px 240px; */
+  justify-content: center;
+  gap: 5rem;
+}
+
+/*
+TAMAÑOS DE PANTALLA SUGERIDOS:
+
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1280px -> pantallas grandes (Desktops, TVs)
+*/
+
+/* MEDIA QUERY: Se aplica a dispositivos móviles, tables o desktops+ */
+
+@media (min-width: 992px) {
+  .features {
+    grid-template-columns: 340px 340px;
+  }
+}
+
+.feature {
+  /* border: 1px solid yellow; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* 14px = 1rem */
+
+  /* text-align: center; */
+}
+
+.feature__image {}
+
+.feature__title {
+  font-family: "Raleway", sans-serif;
+
+  text-align: center;
+}
+
+.feature__text {
+  text-align: center;
+}
+
+/* TODO: COLLABORATION SECTION */
+
+.collaboration {}
+
+.productive {}
+
+.productive__title {}
+
+.productive__text {}
+
+.productive__link {}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials {
+  /* border: 1px solid red; */
+
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  
+  background-color: hsl(218, 28%, 13%);
+}
+
+.testimonials--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .testimonials--wrapper {
+    flex-direction: row;
+  }
+}
+
+/* TODO: Añadir el media query para ver las cajas de testimonios en fila con flexbox */
+
+/* 
+  pseudo-elemento: :after, :before
+  selectores: ?????
+*/
+
+.testimonial {
+  /* border: 1px solid yellow; */
+
+  background-color: hsl(219, 30%, 18%);
+
+  /* padding: TOP-RIGHT-BOTTOM-LEFT */
+  /* padding: TOP RIGHT BOTTOM LEFT */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: .5rem;
+
+  position: relative;
+}
+
+.testimonial:first-child:before {
+  content: '';
+
+  background-image: url(../images/bg-quotes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: block;
+  width: 55px;
+  height: 45px;
+
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  z-index: -1;
+}
+
+.testimonial__text {
+  font-size: 1.4rem;
+
+  /* border: 1px solid yellow; */
+
+  margin-bottom: 2rem;
+}
+
+.testimonial__profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  font-size: .9rem;
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+}
+
+.testimonial__user h4 {
+  font-weight: 700; /* Por defecto para el h4 */
+}
+
+.testimonial__user h5 {
+  font-weight: 400;
+}
+
+/* FOOTER SECTION */
+
+/* TODO: Terminar la maquetación de este footer según el diseño */
+
+.footer {
+  background-color: hsl(216, 53%, 9%);
+
+  padding: 15rem 0 5rem 0;
+}
+
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  margin: 0 auto;
+
+  background-color: transparent;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .footer-info {
+    flex-direction: row;
+  }
+}
+
+.footer-info__description {
+  width: 22rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer-info__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__contact span {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__social {
+  display: flex;
+  gap: 1.5rem;
+}
