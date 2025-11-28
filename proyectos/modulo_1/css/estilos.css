@@ -213,13 +213,13 @@ section {
     position: fixed;
     bottom: 0;
     right: -100%;
-    width: 280px;
+    width: 250px;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 30px 0;
     background: var(--white);
     transition: right 0.3s ease;
-    gap: 0;
-    border-top: 1px solid #f0f0f0;
+    gap: 1;
+    /* border-top: 1px solid #f0f0f0; */
     z-index: 1001;
   }
 
@@ -228,34 +228,32 @@ section {
   }
 
   .header__btn {
-    width: 100%;
+    width: 50%;
     text-align: left;
     padding: 16px 30px !important;
-    border-radius: 0 !important;
     font-size: 15px;
     font-weight: 500;
-    border: none !important;
+    gap: 15px;
   }
-  
+
   .header__btn--login {
-    border-bottom: 1px solid #f0f0f0 !important;
-    background: transparent !important;
-    color: var(--text) !important;
+    color: var(--primary);
+    background: transparent;
+    border: 1px solid var(--primary);
   }
-  
+
   .header__btn--login:hover {
-    background: #f8f9fa !important;
-    color: var(--text) !important;
+    background: var(--primary);
+    color: var(--white);
   }
-  
+
   .header__btn--register {
-    background: transparent !important;
-    color: var(--text) !important;
+    background: var(--primary);
+    color: var(--white);
   }
-  
+
   .header__btn--register:hover {
-    background: #f8f9fa !important;
-    color: var(--text) !important;
+    background: var(--primary-dark);
   }
 }
 
@@ -265,15 +263,19 @@ section {
   }
 
   .header__logo {
-    width: 85px;
-  }
-
-  .header__nav {
-    width: 260px;
+    width: 70px;
   }
 
   .header__actions {
-    width: 260px;
+    flex-direction: column;
+    gap: 8px;
+    border-top:none;
+  }
+
+  .header__btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 }
 
@@ -519,7 +521,7 @@ section {
 /* ========================================================= */
 
 .pricing {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .pricing__title {
@@ -633,7 +635,7 @@ section {
 
 .footer {
   background: var(--footer-bg);
-  color: #9FADBC;
+  color: #9fadbc;
   padding: 60px 0 0;
 }
 
@@ -663,7 +665,7 @@ section {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 16px;
-  color: #9FADBC;
+  color: #9fadbc;
 }
 
 .footer__links {
@@ -673,7 +675,7 @@ section {
 }
 
 .footer__link {
-  color: #9FADBC;
+  color: #9fadbc;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.2s;
@@ -699,7 +701,7 @@ section {
 }
 
 .footer__bottom-link {
-  color: #9FADBC;
+  color: #9fadbc;
   font-size: 13px;
   text-decoration: none;
   transition: color 0.2s;
@@ -710,7 +712,7 @@ section {
 }
 
 .footer__copyright {
-  color: #9FADBC;
+  color: #9fadbc;
   font-size: 13px;
   margin: 0;
 }
@@ -721,7 +723,7 @@ section {
 }
 
 .footer__social-link {
-  color: #9FADBC;
+  color: #9fadbc;
   width: 36px;
   height: 36px;
   display: flex;
