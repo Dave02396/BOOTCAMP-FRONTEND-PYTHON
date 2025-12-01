@@ -12,14 +12,44 @@
   --radius: 12px;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   --footer-bg: #1d2125;
+
+  /* Tipografías */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-alt: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   background: var(--white);
   color: var(--text);
+  line-height: 1.6;
+}
+
+/* Aplicar Inter a todos los títulos y headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero__title,
+.features__title,
+.benefits__title,
+.testimonials__title,
+.pricing__title,
+.contact__title,
+.features__item-title,
+.benefits__item-title,
+.testimonials__name,
+.pricing__card-title,
+.auth__title,
+.footer__section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .container {
@@ -172,6 +202,10 @@ section {
 /* HEADER RESPONSIVE */
 /* ========================================================= */
 
+/* ========================================================= */
+/* HEADER RESPONSIVE - REEMPLAZAR EN TU CSS */
+/* ========================================================= */
+
 @media (max-width: 900px) {
   .header__hamburger {
     display: flex;
@@ -203,6 +237,7 @@ section {
     padding: 16px 30px;
     color: var(--text);
     border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
   }
 
   .header__nav-link:hover {
@@ -213,13 +248,13 @@ section {
     position: fixed;
     bottom: 0;
     right: -100%;
-    width: 250px;
+    width: 280px;
     flex-direction: column;
-    padding: 30px 0;
+    padding: 0;
     background: var(--white);
     transition: right 0.3s ease;
-    gap: 1;
-    /* border-top: 1px solid #f0f0f0; */
+    gap: 0;
+    border-top: 1px solid #f0f0f0;
     z-index: 1001;
   }
 
@@ -228,32 +263,37 @@ section {
   }
 
   .header__btn {
-    width: 50%;
-    text-align: left;
+    width: 100% !important;
+    text-align: left !important;
     padding: 16px 30px !important;
-    font-size: 15px;
-    font-weight: 500;
-    gap: 15px;
+    border-radius: 0 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
   }
 
   .header__btn--login {
-    color: var(--primary);
-    background: transparent;
-    border: 1px solid var(--primary);
+    border-bottom: 1px solid #f0f0f0 !important;
+    background: transparent !important;
+    color: var(--text) !important;
   }
 
   .header__btn--login:hover {
-    background: var(--primary);
-    color: var(--white);
+    background: #f8f9fa !important;
+    color: var(--text) !important;
   }
 
   .header__btn--register {
-    background: var(--primary);
-    color: var(--white);
+    background: transparent !important;
+    color: var(--text) !important;
   }
 
   .header__btn--register:hover {
-    background: var(--primary-dark);
+    background: #f8f9fa !important;
+    color: var(--text) !important;
   }
 }
 
@@ -263,19 +303,19 @@ section {
   }
 
   .header__logo {
-    width: 70px;
+    width: 85px;
+  }
+
+  .header__nav {
+    width: 260px;
   }
 
   .header__actions {
-    flex-direction: column;
-    gap: 8px;
-    border-top:none;
+    width: 260px;
   }
 
-  .header__btn {
-    padding: 8px 12px;
-    font-size: 13px;
-    white-space: nowrap;
+  .footer__logo {
+    display: block;
   }
 }
 
@@ -521,7 +561,7 @@ section {
 /* ========================================================= */
 
 .pricing {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .pricing__title {
@@ -866,5 +906,9 @@ section {
   .footer__bottom-left {
     flex-direction: column;
     gap: 12px;
+  }
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
