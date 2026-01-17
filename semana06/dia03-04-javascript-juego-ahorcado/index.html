@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado + JS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <main class="ahorcado w-96 border mx-auto mt-4 p-6 rounded-lg">
+    <h1 class="ahorcado__titulo text-2xl font-medium text-center mb-8">
+      Juego del Ahorcado + JS
+    </h1>
+
+    <!-- PALABRA OCULTA -->
+     <p class="ahorcado__palabra text-6xl text-center mb-8">___________</p>
+
+     <!-- BOTONES DEL ABECEDARIO -->
+     <section class="ahorcado__botones grid grid-cols-5 gap-4">
+      <!-- <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">A</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">B</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">C</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">D</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">E</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">...</button>
+      <button class="bg-blue-500 p-2 text-white font-bold text-2xl cursor-pointer hover:bg-blue-600 duration-300 rounded">Z</button> -->
+     </section>
+
+     <section class="ahorcado__resultado text-6xl text-green-500 mt-8 text-center font-black hidden">
+      ¡GANASTE!
+     </section>
+
+     <button class="ahorcado__reiniciar bg-yellow-500 p-2 text-white font-bold text-xl cursor-pointer hover:bg-blue-600 duration-300 rounded w-full mt-8 hidden">
+      ¡Empezar de nuevo!
+     </button>
+
+     <script src="main.js"></script>
+  </main>
+</body>
+</html>
