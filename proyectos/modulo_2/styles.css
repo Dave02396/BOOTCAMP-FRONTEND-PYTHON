@@ -1,0 +1,393 @@
+/**
+ * Dragon Ball Characters App - Estilos
+ * Proyecto Frontend Bootcamp G30
+ */
+
+/* ===== Reset y Configuración Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6347 50%, #FFD700 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== Contenedor Principal ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ===== Contador de Favoritos ===== */
+.favorites-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.counter-icon {
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+.counter-text {
+    font-weight: 500;
+}
+
+.counter-text strong {
+    color: #FF6347;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Notificaciones ===== */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+}
+
+.notification {
+    background: white;
+    color: #333;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.4s ease;
+    border-left: 4px solid #FF8C00;
+}
+
+.notification.success {
+    border-left-color: #FF6347;
+}
+
+.notification.removed {
+    border-left-color: #ff6b6b;
+}
+
+.notification-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.notification-message {
+    flex: 1;
+    font-weight: 500;
+}
+
+.notification-message strong {
+    color: #FF6347;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* ===== Estados de Carga y Error ===== */
+.loading {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+.error {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ===== Grid de Personajes ===== */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+    justify-items: center;
+}
+
+/* ===== Tarjetas de Personajes ===== */
+.character-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.character-image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%);
+    padding: 10px;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.character-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    color: #666;
+}
+
+.character-detail span:first-child {
+    font-weight: 600;
+    color: #444;
+}
+
+/* ===== Botón de Favoritos ===== */
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+.favorite-btn.active {
+    animation: heartbeat 0.3s ease;
+}
+
+/* ===== Animaciones ===== */
+@keyframes heartbeat {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+}
+
+/* ===== Paginación ===== */
+.pagination {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .characters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .pagination {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pagination-buttons {
+        justify-content: center;
+    }
+
+    .favorites-counter {
+        position: static;
+        display: inline-flex;
+        margin: 15px auto 0;
+    }
+
+    #notification-container {
+        left: 10px;
+        right: 10px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .characters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .character-name {
+        font-size: 1.3rem;
+    }
+
+    .pagination button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Soporte para pantallas grandes (4 columnas) ===== */
+@media (min-width: 1200px) {
+    .characters-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+        margin: 0 auto 30px;
+    }
+}
